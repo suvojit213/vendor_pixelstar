@@ -37,6 +37,7 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_PRP}" |_|  |___/_/\_\_____|_____|____/ |_/_/   \_\_| \_\ "${CL_PRP}
 	@echo -e ${CL_PRP}""${CL_PRP}
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
+	$(hide) ./vendor/PIXELSTAR/tools/generate_json_build_info.sh $(PIXELSTAR_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(PIXELSTAR_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(PIXELSTAR_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(PIXELSTAR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
