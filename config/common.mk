@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     PixelstarWallpaperStub \
     RepainterServicePriv
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelstarBlackTheme
+
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
