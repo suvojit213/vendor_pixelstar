@@ -108,6 +108,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PixelstarWallpaperStub
 
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
