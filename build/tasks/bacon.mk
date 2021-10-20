@@ -20,9 +20,8 @@ PIXELSTAR_TARGET_PACKAGE := $(PRODUCT_OUT)/pixelstar-$(PIXELSTAR_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
+CL_CYN="\033[36m"
 CL_PRP="\033[35m"
-CL_RED="\033[31m"
-CL_GRN="\033[32m"
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
@@ -37,10 +36,13 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_PRP}" |_|  |___/_/\_\_____|_____|____/ |_/_/   \_\_| \_\ "${CL_PRP}
 	@echo -e ${CL_PRP}""${CL_PRP}
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
-	$(hide) ./vendor/PIXELSTAR/tools/generate_json_build_info.sh $(PIXELSTAR_TARGET_PACKAGE)
-	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(PIXELSTAR_TARGET_PACKAGE)${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(PIXELSTAR_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(PIXELSTAR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"ID:"${CL_RED}" `md5sum $(PIXELSTAR_TARGET_PACKAGE) | cut -d ' ' -f 1`"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Path:"${CL_RED}" $(PIXELSTAR_TARGET_PACKAGE)"${CL_RST}
-	echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXELSTAR_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(PIXELSTAR_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PIXELSTAR_TARGET_PACKAGE).sha256sum
+	$(hide) ./vendor/pixelstar/tools/generate_json_build_info.sh $(PIXELSTAR_TARGET_PACKAGE)
+	echo -e ${CL_BLD}${CL_CYN}"===============================-Package complete-==============================="${CL_CYN}
+	echo -e ${CL_BLD}${CL_CYN}"Datetime :"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Size:"${CL_PRP}" `du -sh $(PIXELSTAR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Filehash: "${CL_PRP}" `md5sum $(PIXELSTAR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Filename: "${CL_PRP} $(PIXELSTAR_TARGET_PACKAGE)${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"ID: "${CL_PRP}" `cat $(PIXELSTAR_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"================================================================================"${CL_CYN}
