@@ -217,6 +217,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/pixelstar/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
