@@ -143,10 +143,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BtHelper
 
-# Pixelstar packages
-PRODUCT_PACKAGES += \
-    PixelstarWallpaperStub 
-
 # TextClassifier
 PRODUCT_PACKAGES += \
     libtextclassifier_annotator_en_model \
