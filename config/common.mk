@@ -110,7 +110,8 @@ PRODUCT_PACKAGES += \
 
 # Pixelstar packages
 PRODUCT_PACKAGES += \
-    PixelstarWallpaperStub
+    PixelstarWallpaperStub \
+    RepainterServicePriv
 
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
