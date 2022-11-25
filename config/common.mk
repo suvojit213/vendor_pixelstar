@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     build-manifest
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # Pixelstar packages
 PRODUCT_PACKAGES += \
     PixelstarWallpaperStub \
