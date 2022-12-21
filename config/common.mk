@@ -281,5 +281,12 @@ include vendor/pixelstar/config/branding.mk
 
 include vendor/pixelstar/certification/config.mk
 
+# Enable ThinLTO Source wide Conditionally.
+ifeq ($(TARGET_BUILD_WITH_LTO),true)
+GLOBAL_THINLTO := true
+USE_THINLTO_CACHE := true
+SKIP_ABI_CHECKS := true
+endif
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixelstar/config/partner_gms.mk
