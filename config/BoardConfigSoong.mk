@@ -53,6 +53,7 @@ SOONG_CONFIG_pixelstarGlobalVars += \
     target_trust_usb_control_enable \
     target_trust_usb_control_disable \
     uses_egl_display_array \
+    uses_nothing_camera \
     uses_oplus_camera
 
 SOONG_CONFIG_NAMESPACES += pixelstarNvidiaVars
@@ -86,6 +87,7 @@ SOONG_CONFIG_pixelstarQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VI
 SOONG_CONFIG_pixelstarQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_pixelstarQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_pixelstarGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
+SOONG_CONFIG_pixelstarGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
