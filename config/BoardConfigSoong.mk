@@ -49,7 +49,8 @@ SOONG_CONFIG_pixelstarGlobalVars += \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
     target_trust_usb_control_disable \
-    uses_egl_display_array
+    uses_egl_display_array \
+    uses_oplus_camera
 
 SOONG_CONFIG_NAMESPACES += pixelstarNvidiaVars
 SOONG_CONFIG_pixelstarNvidiaVars += \
@@ -76,6 +77,7 @@ SOONG_CONFIG_pixelstarGlobalVars_gralloc_handle_has_custom_content_md_reserved_s
 SOONG_CONFIG_pixelstarGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_pixelstarGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
 SOONG_CONFIG_pixelstarGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
+SOONG_CONFIG_pixelstarGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_pixelstarNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_pixelstarQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_pixelstarQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
