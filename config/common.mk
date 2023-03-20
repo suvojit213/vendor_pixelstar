@@ -202,6 +202,13 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
 
+# Adblock
+PRODUCT_PACKAGES += \
+    hosts.adblock
+
+PRODUCT_COPY_FILES += \
+    vendor/pixelstar/etc/init/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
+
 ## neofetch
 PRODUCT_COPY_FILES += \
     vendor/pixelstar/tools/neofetch:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/neofetch
