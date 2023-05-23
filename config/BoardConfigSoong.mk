@@ -92,6 +92,7 @@ SOONG_CONFIG_pixelstarQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES
 SOONG_CONFIG_pixelstarGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 SOONG_CONFIG_pixelstarGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_pixelstarGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
+SOONG_CONFIG_pixelstarGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
