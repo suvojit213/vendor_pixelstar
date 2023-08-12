@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PixelstarBlackTheme
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+    
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
