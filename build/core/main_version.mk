@@ -4,22 +4,14 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# LineageOS System Version
+# Pixelstar System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal
-
-# LineageOS Platform Display Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
-
-# LineageOS Platform SDK Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
-
-# LineageOS Platform Internal Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+    ro.pixelstar.base.codename=$(PIXELSTAR_CODENAME) \
+    ro.pixelstar.base.version=$(PIXELSTAR_NUM_VER) \
+    ro.pixelstar.build.version=$(PIXELSTAR_BUILD_VERSION) \
+    ro.pixelstar.build.date=$(BUILD_DATE) \
+    ro.pixelstar.buildtype=$(PIXELSTAR_BUILD_TYPE) \
+    ro.pixelstar.display.version=$(PIXELSTAR_DISPLAY_VERSION) \
+    ro.pixelstar.fingerprint=$(ROM_FINGERPRINT) \
+    ro.pixelstar.version=$(PIXELSTAR_VERSION) \
+    ro.modversion=$(PIXELSTAR_VERSION)
