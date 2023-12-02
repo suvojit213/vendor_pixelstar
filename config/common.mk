@@ -289,5 +289,8 @@ USE_THINLTO_CACHE := true
 SKIP_ABI_CHECKS := true
 endif
 
+PRODUCT_COPY_FILES += \
+    vendor/pixelstar/overlay/rro_packages/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
+    
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixelstar/config/partner_gms.mk
