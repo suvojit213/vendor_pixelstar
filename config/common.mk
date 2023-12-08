@@ -259,7 +259,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/pixelstar/overlay/no-rro
 
 PRODUCT_PACKAGES += \
-    CertifiedPropsOverlay \
     CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
     ImmersiveNavigationOverlay \
@@ -271,8 +270,7 @@ $(call inherit-product, vendor/pixelstar/config/bootanimation.mk)
 
 include vendor/pixelstar/config/branding.mk
 
-PRODUCT_COPY_FILES += \
-    vendor/pixelstar/config/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
+include vendor/pixelstar/certification/config.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixelstar/config/partner_gms.mk
