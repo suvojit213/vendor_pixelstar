@@ -141,8 +141,7 @@ PRODUCT_PACKAGES += \
 
 # Pixelstar packages
 PRODUCT_PACKAGES += \
-    PixelstarWallpaperStub \
-    RepainterServicePriv
+    PixelstarWallpaperStub 
 
 # TextClassifier
 PRODUCT_PACKAGES += \
