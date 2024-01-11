@@ -27,14 +27,14 @@ CL_PRP="\033[35m"
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXELSTAR_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(PIXELSTAR_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PIXELSTAR_TARGET_PACKAGE).sha256sum
-	@echo -e ${CL_PRP}""${CL_PRP}
-	@echo -e ${CL_PRP}""${CL_PRP}
-	@echo -e ${CL_PRP}"  ____ _____  _______ _     ____ _____  _    ____   "${CL_PRP}
-	@echo -e ${CL_PRP}" |  _ \_ _\ \/ / ____| |   / ___|_   _|/ \  |  _ \  "${CL_PRP}
-	@echo -e ${CL_PRP}" | |_) | | \  /|  _| | |   \___ \ | | / _ \ | |_) | "${CL_PRP}
-	@echo -e ${CL_PRP}" |  __/| | /  \| |___| |___ ___) || |/ ___ \|  _ <  "${CL_PRP}
-	@echo -e ${CL_PRP}" |_|  |___/_/\_\_____|_____|____/ |_/_/   \_\_| \_\ "${CL_PRP}
-	@echo -e ${CL_PRP}""${CL_PRP}
+	@echo -e ${CL_CYN}""${CL_CYN}
+	@echo -e ${CL_PRP}""${CL_CYN}
+	@echo -e ${CL_CYN}"  ____ _____  _______ _     ____ _____  _    ____   "${CL_CYN}
+	@echo -e ${CL_CYN}" |  _ \_ _\ \/ / ____| |   / ___|_   _|/ \  |  _ \  "${CL_CYN}
+	@echo -e ${CL_CYN}" | |_) | | \  /|  _| | |   \___ \ | | / _ \ | |_) | "${CL_CYN}
+	@echo -e ${CL_CYN}" |  __/| | /  \| |___| |___ ___) || |/ ___ \|  _ <  "${CL_CYN}
+	@echo -e ${CL_CYN}" |_|  |___/_/\_\_____|_____|____/ |_/_/   \_\_| \_\ "${CL_CYN}
+	@echo -e ${CL_CYN}""${CL_CYN}
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXELSTAR_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(PIXELSTAR_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PIXELSTAR_TARGET_PACKAGE).sha256sum

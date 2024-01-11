@@ -45,6 +45,7 @@ import java.util.Set;
 import com.android.internal.custom.hardware.LineageHardwareManager;
 import com.pixelstar.support.R;
 
+
 /**
  * Helpers for checking if a device supports various features.
  *
