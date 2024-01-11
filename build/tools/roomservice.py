@@ -30,7 +30,7 @@ import urllib.parse
 import urllib.request
 
 custom_local_manifest = ".repo/local_manifests/snippets/pixelstar.xml"
-custom_default_revision = "triton"
+custom_default_revision = "14"
 custom_dependencies = "pixelstar.dependencies"
 org_manifest = "pixelstar-devices"  # leave empty if org is provided in manifest
 org_display = "pixelstar-devices"  # needed for displaying
