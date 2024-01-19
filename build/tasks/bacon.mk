@@ -36,10 +36,7 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}" |_|  |___/_/\_\_____|_____|____/ |_/_/   \_\_| \_\ "${CL_CYN}
 	@echo -e ${CL_CYN}""${CL_CYN}
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXELSTAR_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(PIXELSTAR_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PIXELSTAR_TARGET_PACKAGE).sha256sum
 	$(hide) ./vendor/pixelstar/tools/generate_json_build_info.sh $(PIXELSTAR_TARGET_PACKAGE)
-	echo -e ${CL_BLD}${CL_CYN}"===============================-Package complete-==============================="${CL_CYN}
 	echo -e ${CL_BLD}${CL_CYN}"Datetime :"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"Size:"${CL_PRP}" `du -sh $(PIXELSTAR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"Filehash: "${CL_PRP}" `md5sum $(PIXELSTAR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
