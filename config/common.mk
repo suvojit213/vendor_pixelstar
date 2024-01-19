@@ -279,7 +279,8 @@ $(call inherit-product, vendor/pixelstar/config/bootanimation.mk)
 
 include vendor/pixelstar/config/branding.mk
 
-include vendor/pixelstar/certification/config.mk
+#Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
 
 # Enable ThinLTO Source wide Conditionally.
 ifeq ($(TARGET_BUILD_WITH_LTO),true)
