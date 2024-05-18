@@ -252,9 +252,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
 
-# SystemUI
+# Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    NexusLauncherRelease \
+    SystemUI \
+    Settings
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
@@ -276,11 +278,10 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/pixelstar/overlay/no-rro
 
 PRODUCT_PACKAGES += \
-    CustomPixelLauncherOverlay \
-    DocumentsUIOverlay \
-    ImmersiveNavigationOverlay \
-    NetworkStackOverlay \
-    NexusLauncherResOverlay
+    ImmersiveNavigationOverlay
+    
+# pixelstar prebuilts
+$(call inherit-product, vendor/pixelstar-prebuilts/config.mk)
 
 # LineageHW permission
 PRODUCT_COPY_FILES += \
